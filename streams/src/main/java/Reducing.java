@@ -22,5 +22,11 @@ public class Reducing {
         System.out.println("Max:" + max.get());
         System.out.println("Sum:" + sum.get());
 
+        //Task
+        int dishCount = DishData.getAll().stream().map(dish -> 1).reduce(0,(a,b)-> a+b);
+        System.out.println(dishCount);
+
+        long dcount = DishData.getAll().stream().count();
+        System.out.println(dcount);
     }
 }
